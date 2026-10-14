@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1791950962459,
+      "tag": "0000_create_whatsapp_inbox_and_usage",
+      "breakpoints": true
+    }
+  ]
+}
