@@ -1,8 +1,6 @@
 # Balcão adjustments
 
-- [ ] Import original project without changing its design. Blocker: awaiting user's source ZIP.
-- [ ] Update first-screen copy and quick chat questions; remove misleading example labels and fabricated counters.
-- [ ] Update Profissional recommendation, plan comparison, trial, cancellation and usage-limit disclosures.
-- [ ] Configure recurring card checkout and one-time Pix checkout for assisted setup and monthly plans using the existing Stripe integration.
-- [ ] Verify that WhatsApp connection and plan status require server confirmation from Meta and Stripe.
-- [ ] Verify affected flows and preserve existing visual layout.
+- [x] Import original page without changing its design.
+- [x] Copy, quick questions, plan comparison, trial/cancellation/limit text.
+- [ ] Live Stripe checkout (card subscriptions + Pix one-time). Blocker: links are Stripe test links; need live payment links from the user.
+- [ ] Server-confirmed WhatsApp (Meta) and plan (Stripe) status. Blocker: needs Meta app access and Stripe keys.

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Balcão — o atendente que cobre as horas em que você fecha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--n:#10133f;--o:#ff7a45;--bg:#eceff9;--l:#c9cde8;--m:#525b8c;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--m);font:18px/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3,.d{font-family:Anton,Impact,'Arial Narrow',sans-serif;font-weight:400;color:var(--n);margin:0}
+.w{max-width:1140px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font:400 34px Anton,Impact,sans-serif;color:var(--n);display:flex;align-items:center;gap:8px}.logo i{width:13px;height:13px;border-radius:50%;background:var(--o)}
+.pill{display:inline-block;border:2px solid var(--n);background:none;color:var(--n);border-radius:999px;padding:11px 24px;font:700 15px Figtree,sans-serif;cursor:pointer;text-decoration:none}
+.pill.o{background:var(--o);border-color:var(--o)}.pill.n{background:var(--n);color:#fff}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center;padding:10px 0 60px}
+.hero h1{font-size:clamp(64px,11vw,150px);line-height:.98}.hero p{max-width:540px;font-size:20px}
+#ring{width:100%;max-width:470px;margin:0 auto;display:block}
+.leg{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;justify-content:center}.leg i{display:inline-block;width:18px;height:8px;border-radius:4px;margin-right:6px}
+section{padding:56px 0}
+h2{font-size:clamp(40px,7vw,68px);line-height:1.05}
+.sub{max-width:590px;margin:6px 0 18px}
+.search{width:min(560px,100%);background:none;border:0;border-bottom:3px solid var(--n);font:700 18px Figtree,sans-serif;color:var(--n);padding:10px 2px;outline:0}
+.search::placeholder{color:#7a82a8}
+.cats{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+.cat{border:2px solid var(--l);background:none;color:var(--n);border-radius:999px;padding:6px 18px;font:800 14px Figtree,sans-serif;cursor:pointer}.cat.s{background:var(--n);color:#fff;border-color:var(--n)}
+.biz{display:flex;flex-wrap:wrap;gap:10px}
+.bz{display:flex;align-items:center;gap:12px;background:#fff;border:2px solid var(--l);border-radius:999px;padding:8px 22px 8px 8px;font:800 17px Figtree,sans-serif;color:var(--n);cursor:pointer}
+.bz b{width:30px;height:30px;border-radius:50%}.bz.s{background:var(--o);border-color:var(--o)}.bz.s b{background:none!important;border:3px solid var(--n)}
+.cols{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:start}
+h3{font-size:34px;margin:30px 0 8px}
+.bar{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0 22px}
+label{display:block;font:700 13px Figtree,sans-serif;color:var(--m);margin-top:14px}
+.u{width:100%;background:none;border:0;border-bottom:2px solid var(--l);padding:8px 2px;font:600 19px Figtree,sans-serif;color:var(--n);outline:0}.u:focus{border-color:var(--n)}
+.r{display:flex;gap:12px;align-items:center;margin-bottom:6px}.r .u:first-child{flex:1}.r .p{width:112px}
+.x{flex:none;width:40px;height:40px;border-radius:50%;border:2px solid var(--l);background:none;color:var(--n);font-weight:800;cursor:pointer}
+.hrs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.chat{border:2px solid var(--l);border-radius:30px;background:#fff;overflow:hidden;display:flex;flex-direction:column;min-height:540px;position:sticky;top:20px}
+.ch{background:var(--o);padding:16px 22px;color:var(--n)}.ch .d{font-size:32px}.ch small{display:block;font-weight:700;font-size:14px}
+.ms{flex:1;padding:16px;display:flex;flex-direction:column;gap:10px;overflow-y:auto;max-height:420px}
+.m{max-width:82%;padding:12px 18px;border-radius:20px;color:var(--n);white-space:pre-wrap;line-height:1.5}.m.b{background:var(--l);border-bottom-left-radius:6px}.m.u2{background:var(--n);color:#fff;align-self:flex-end;border-bottom-right-radius:6px}
+.qk{display:flex;flex-wrap:wrap;gap:8px;padding:6px 16px 14px}.qk button{border:2px solid var(--l);background:#fff;border-radius:999px;padding:6px 14px;font:700 13.5px Figtree,sans-serif;color:var(--n);cursor:pointer}
+.sd{display:flex;gap:10px;padding:12px 14px;border-top:2px solid var(--l)}.sd input{flex:1;border:2px solid var(--l);border-radius:999px;padding:10px 18px;font:500 16px Figtree,sans-serif;outline:0;color:var(--n)}
+.stats{border-top:3px solid var(--n);margin-top:50px;padding-top:6px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.stats b{display:block;font:400 clamp(90px,14vw,170px)/1 Anton,Impact,sans-serif;color:var(--n)}.stats div:first-child b{color:var(--o)}.stats span{font-size:16px}
+.wag{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:20px}
+.opt{display:block;width:100%;text-align:left;background:#fff;border:2px solid var(--l);border-radius:26px;padding:16px 22px;margin-bottom:12px;cursor:pointer;font:500 16px Figtree,sans-serif;color:var(--m)}.opt.s{border-color:var(--o);border-width:3px}.opt .d{display:block;font-size:30px}
+.wn{border-left:4px solid var(--o);padding:2px 0 2px 12px;font-size:15px;font-weight:700;color:var(--n);margin:14px 0}
+.big{background:#fff;border:2px solid var(--l);border-radius:36px;padding:34px}.tag{display:inline-block;background:var(--o);color:var(--n);font:800 12px Figtree,sans-serif;border-radius:999px;padding:5px 14px}
+.big h3{font-size:50px;margin:10px 0 4px}.st{display:flex;gap:16px;align-items:center;padding:11px 0;border-top:1px solid var(--l)}.st:first-of-type{border-top:2px solid var(--l)}.st i{flex:none;width:36px;height:36px;border:2px solid var(--l);border-radius:50%;display:grid;place-items:center;font:700 14px Figtree,sans-serif;font-style:normal;color:var(--n)}
+.sm{font-size:14px}
+.pl{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:3px solid var(--n);margin-top:24px;align-items:start}
+.pc{padding:24px 28px 30px}.pc.f{background:var(--o);padding-bottom:50px;color:var(--n)}.pc .d{font-size:clamp(60px,8vw,96px);line-height:1}.pc small{font:800 15px Figtree,sans-serif}.pc h3{margin:0}
+.pc ul{padding-left:20px;margin:12px 0 26px}.pc .pill{display:block;text-align:center}
+.ft{border-top:3px solid var(--n);margin-top:60px;padding:34px 0 60px;display:flex;justify-content:space-between;gap:24px;align-items:center;flex-wrap:wrap}
+.av{width:60px;height:60px;border:5px solid var(--o);border-radius:50%;display:grid;place-items:center;font:400 22px Anton,sans-serif;color:var(--n)}
+dialog{border:2px solid var(--n);border-radius:24px;max-width:560px;width:92%;background:var(--bg);color:var(--m)}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--n);color:#fff;padding:12px 22px;border-radius:999px;font:700 15px Figtree,sans-serif;display:none;z-index:9;max-width:92%}
+@media(max-width:820px){.hero,.cols,.wag{grid-template-columns:1fr;gap:30px}.pl{grid-template-columns:1fr}.chat{position:static}.hrs{grid-template-columns:1fr}.stats{gap:6px}}
+</style></head><body>
+<div class="w">
+<nav><div class="logo"><i></i>balcão</div><div style="display:flex;gap:10px"><a class="pill" href="#planos">Ver planos</a><a class="pill o" href="#demo">Meu painel</a></div></nav>
+<div class="hero"><div><h1>Seu negócio dorme. O balcão não.</h1><p class="d" style="font-size:clamp(30px,4.2vw,46px);line-height:1.25;margin:0 0 16px">Seus clientes recebem respostas. <span style="background:var(--o);color:var(--n);padding:0 12px;border-radius:12px;-webkit-box-decoration-break:clone;box-decoration-break:clone">Mesmo quando você não está disponível.</span></p><p>O Balcão atende perguntas sobre preços, horários e serviços, 24 horas por dia, e encaminha os casos que precisam de você.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><a class="pill o" href="#demo">Testar grátis agora</a><a class="pill" href="#prova">Ver como funciona</a></div></div>
+<div><svg id="ring" viewBox="0 0 480 480"></svg><div class="leg"><span><i style="background:var(--n)"></i>seu negócio aberto</span><span><i style="background:var(--o)"></i>Balcão atendendo</span><span id="ptr"></span></div></div></div>
+
+<section id="picker" style="padding-top:20px"><h2>Qual é o seu negócio?</h2><p class="sub">Escolha um tipo para carregar um modelo pronto. Depois é só trocar pelos seus dados.</p>
+<input class="search" id="sr" placeholder="Buscar: pizzaria, academia, oficina..."><div class="cats" id="cats"></div><div class="biz" id="biz"></div></section>
+
+<section id="demo"><h2>Mude os dados. Veja o atendente mudar.</h2><p class="sub">Altere o horário e o relógio acima se ajusta. Altere um preço e o chat responde com o valor novo.</p>
+<div class="cols"><div><h3 style="margin-top:0">Seu negócio</h3>
+<div class="bar"><button class="pill o" id="bs">Salvar negócio</button><button class="pill" id="bp">Publicar atendente</button><button class="pill" id="bv">Ver atendimentos</button></div>
+<label>Nome</label><input class="u" id="nome"><label>Endereço</label><input class="u" id="end">
+<h3>Serviços e preços</h3><div id="svc"></div><button class="pill" id="aS" style="margin-top:12px">+ Adicionar serviço</button>
+<h3>Perguntas frequentes</h3><p class="sm" style="margin:0 0 10px">O atendente usa estas respostas. Escreva a pergunta do jeito que o cliente faria.</p><div id="faq"></div>
+<div class="bar"><button class="pill" id="aF">+ Adicionar pergunta</button><button class="pill o" id="bs2">Salvar alterações</button></div>
+<h3>Horários</h3><div class="hrs"><div><label style="margin:0">Segunda a sexta</label><input class="u" id="h0"></div><div><label style="margin:0">Sábado</label><input class="u" id="h1"></div><div><label style="margin:0">Domingo</label><input class="u" id="h2"></div></div></div>
+<div><div class="chat"><div class="ch"><div class="d" id="cn"></div><small>Atendente virtual · responde agora</small></div><div class="ms" id="ms"></div>
+<div class="qk" id="qk"></div><div class="sd"><input id="q" placeholder="Pergunte como um cliente"><button class="pill o" id="go">Enviar</button></div></div></div></div>
+<div class="stats"><div><b id="s1">0</b><span>perguntas respondidas</span></div><div><b id="s2">0</b><span>pedidos de atendimento</span></div><div><b id="s3">0</b><span>passadas para a equipe</span></div></div>
+<p class="sm" style="margin:6px 0 20px">Os números mostram atendimentos reais feitos neste navegador.</p><a class="pill o" href="#whatsapp">Conectar meu WhatsApp</a></section>
+
+<section id="whatsapp"><h2>Conecte o seu WhatsApp</h2><p class="sub">O atendente só começa a responder depois que o dono conecta o número dele. Escolha qual número o seu negócio usa hoje e veja o caminho.</p>
+<div class="wag"><div><div id="opts"></div><label>Número do WhatsApp do negócio</label><input class="u" id="wa" inputmode="tel" placeholder="11 99999-0000">
+<div class="wn" id="wnn">A conexão ainda não foi ativada. É necessário configurar o aplicativo Meta e autorizar o WhatsApp Business. Nenhum número foi conectado.</div>
+<button class="pill o" id="wc">Conectar WhatsApp</button> <a class="sm" id="wl" target="_blank" rel="noopener" style="display:none;margin-left:12px;color:var(--n);font-weight:700">Abrir link para clientes</a>
+<p class="sm" style="margin-top:20px">A conexão automática depende da ativação da plataforma WhatsApp Business pela Meta.</p></div>
+<div class="big" id="big"></div></div></section>
+
+<section id="prova"><h2>Veja uma conversa de madrugada</h2><p class="sub">Como o Balcão atende quando você está fechado e passa para a equipe o que precisa de uma pessoa.</p><div class="chat" style="min-height:0;position:static;max-width:540px"><div class="ch"><div class="d">Pizzaria Forno Vivo</div><small>Hoje, 22h40 · negócio fechado para pedidos por telefone</small></div><div class="ms" style="max-height:none"><div class="m u2">Ainda dá pra pedir pizza hoje?</div><div class="m b">Sim! Atendemos até as 23h. Pizza grande: R$ 62,00. Pizza média: R$ 48,00. Quer fazer um pedido?</div><div class="m u2">Quero uma grande de calabresa</div><div class="m b">Anotei seu pedido! Diga seu nome e endereço e a equipe confirma.</div></div><div class="wn" style="margin:0 16px 16px">Passado para a equipe: pedido de atendimento registrado.</div></div><p class="sm" style="margin-top:14px">Atendimento feito fora do horário, com passagem para a equipe quando precisa de uma pessoa.</p></section>
+<section id="planos"><h2>Escolha como começar</h2><p class="sub">Cancele quando quiser pelo portal da Stripe. O teste grátis de 7 dias vale só na primeira assinatura com cartão.</p><p class="sm"><b style="color:var(--n)">Pague com cartão de crédito, cartão de débito ou Pix</b>, em ambiente seguro da Stripe. A assinatura mensal automática é no cartão; o Pix vale para pagamentos avulsos (1 mês ou configuração).</p>
+<div class="pl"><div class="pc"><h3>Inicial</h3><div class="d">7 dias <small>grátis</small></div><p style="font-weight:700;margin:6px 0">Depois, R$ 29/mês. Cobrança disponível após configurar pagamentos.</p><ul><li>Atendente no site</li><li>Perguntas frequentes</li><li>Configuração básica</li></ul><a class="pill" href="https://buy.stripe.com/test_eVq28kaPN5rbgx58ru8AE00" target="_blank" rel="noopener">Começar 7 dias grátis</a><a class="pill" style="display:block;text-align:center;margin-top:10px" href="https://buy.stripe.com/test_dRm4gse1Z06Rft1dLO8AE03" target="_blank" rel="noopener">Pagar 1 mês com Pix</a></div>
+<div class="pc f"><span class="tag" style="background:var(--n);color:#fff">Recomendado</span><h3>Profissional</h3><div class="d">R$ 59 <small>/mês</small></div><ul style="margin-top:20px"><li>Serviços, preços e horários do seu negócio</li><li>Captação de interessados</li><li>Painel e relatórios</li></ul><a class="pill n" href="https://buy.stripe.com/test_14A00c7DBaLvcgPdLO8AE01" target="_blank" rel="noopener">Assinar Profissional</a><a class="pill" style="display:block;text-align:center;margin-top:10px" href="https://buy.stripe.com/test_cNi14g0b95rb5SrfTW8AE04" target="_blank" rel="noopener">Pagar 1 mês com Pix</a></div>
+<div class="pc"><h3>Configuração assistida</h3><div class="d">R$ 99 <small>única</small></div><ul style="margin-top:20px"><li>A gente configura por você</li><li>Revisão das respostas</li><li>Pronto para usar</li></ul><a class="pill" href="https://buy.stripe.com/test_3cI28k1fd5rb3KjgY08AE02" target="_blank" rel="noopener">Pagar R$ 99 (cartão ou Pix)</a></div></div>
+<h3 style="margin-top:44px">Inicial ou Profissional?</h3><p class="sub">Escolha o Inicial para testar. Escolha o Profissional quando quiser que o atendente use os preços e horários do seu negócio, capte interessados e mostre os números no painel.</p><div style="overflow-x:auto"><table style="width:100%;min-width:520px;border-collapse:collapse;font-size:16px"><tr style="color:var(--n);text-align:left"><th style="padding:10px 0"></th><th>Inicial</th><th>Profissional</th></tr><tr style="border-top:2px solid var(--l)"><td style="padding:10px 0">Preço</td><td>R$ 29/mês</td><td><b style="color:var(--n)">R$ 59/mês</b></td></tr><tr style="border-top:1px solid var(--l)"><td style="padding:10px 0">7 dias grátis</td><td>✓</td><td>—</td></tr><tr style="border-top:1px solid var(--l)"><td style="padding:10px 0">Atendente no site</td><td>✓</td><td>✓</td></tr><tr style="border-top:1px solid var(--l)"><td style="padding:10px 0">Perguntas frequentes</td><td>✓</td><td>✓</td></tr><tr style="border-top:1px solid var(--l)"><td style="padding:10px 0">Serviços, preços e horários do negócio</td><td>—</td><td>✓</td></tr><tr style="border-top:1px solid var(--l)"><td style="padding:10px 0">Captação de interessados</td><td>—</td><td>✓</td></tr><tr style="border-top:1px solid var(--l);border-bottom:2px solid var(--l)"><td style="padding:10px 0">Painel e relatórios</td><td>—</td><td>✓</td></tr></table></div><p class="sm" style="margin-top:14px"><b style="color:var(--n)">Cancelamento:</b> pelo botão “Gerenciar assinatura”, sem falar com ninguém. O teste grátis exige cartão e vale só na primeira assinatura. <b style="color:var(--n)">Limites de uso:</b> cada plano tem um limite mensal de conversas atendidas, informado antes da contratação.</p></section>
+<div class="ft"><div style="display:flex;gap:16px;align-items:center"><div class="av">GSF</div><div><div class="d" style="font-size:34px;line-height:1.1">Gabriel Santos Ferreira</div><span class="sm">Criador do Balcão</span></div></div><p class="sm" style="max-width:340px;margin:0">Balcão responde com inteligência artificial a partir dos dados cadastrados pelo seu negócio.</p></div>
+</div>
+<dialog id="dg"><h3 style="margin-top:0">Atendimentos</h3><div id="lg" style="max-height:50vh;overflow:auto"></div><form method="dialog" style="margin-top:14px"><button class="pill">Fechar</button></form></dialog>
+<div id="toast"></div>
+<script>
+const C=["Beleza","Saúde","Serviços","Comércio","Educação","Alimentação"];
+const B=`Barbearia|Beleza|#ff7a45|Barbearia Alto Corte|Rua Augusta, 1200 — Consolação, São Paulo|Corte:45,Barba:35,Corte e barba:70,Sobrancelha:15|9h às 20h|9h às 17h|Fechado
+Salão de beleza|Beleza|#ff5fb0|Salão Bela Vista|Rua das Flores, 120, São Paulo|Corte feminino:80,Escova:60,Manicure:40,Coloração:150|9h às 19h|9h às 17h|Fechado
+Clínica de estética|Beleza|#b48cff|Clínica Pele Viva|Av. Paulista, 900, São Paulo|Limpeza de pele:120,Massagem:140,Peeling:180|9h às 19h|9h às 14h|Fechado
+Consultório odontológico|Saúde|#4db3ff|Odonto Sorriso|Rua da Saúde, 88, São Paulo|Consulta:150,Limpeza:180,Clareamento:600|8h às 18h|8h às 12h|Fechado
+Academia|Saúde|#ffb020|Academia Força Total|Rua do Esporte, 50, São Paulo|Mensalidade:99,Trimestral:270,Aula avulsa:25|6h às 22h|8h às 14h|Fechado
+Oficina mecânica|Serviços|#ffd53d|Auto Center Silva|Rua do Motor, 300, São Paulo|Troca de óleo:150,Alinhamento:90,Revisão completa:420|8h às 18h|8h às 12h|Fechado
+Pet shop|Comércio|#7ee0d0|Pet Amigo|Rua dos Bichos, 15, São Paulo|Banho:50,Tosa:70,Consulta veterinária:120|9h às 18h|9h às 15h|Fechado
+Loja de roupas|Comércio|#3ddc97|Moda Centro|Rua do Comércio, 200, São Paulo|Camiseta:59,Calça jeans:149,Vestido:129|10h às 19h|10h às 16h|Fechado
+Escola de idiomas|Educação|#8c9bff|Idiomas Global|Av. Brasil, 400, São Paulo|Inglês mensal:280,Espanhol mensal:260,Aula experimental:0|8h às 21h|8h às 12h|Fechado
+Pizzaria|Alimentação|#ff5c5c|Pizzaria Forno Vivo|Rua Itália, 77, São Paulo|Pizza grande:62,Pizza média:48,Refrigerante 2L:12|18h às 23h|18h às 23h|18h às 22h
+Lash designer|Beleza|#f9a8d8|Studio Lash|Rua Bela, 33, São Paulo|Fio a fio:150,Volume russo:190,Manutenção:100|9h às 18h|9h às 14h|Fechado
+Nail designer|Beleza|#ff8fa3|Studio Nail|Rua das Rosas, 18, São Paulo|Mão:40,Pé:45,Alongamento:140|9h às 18h|9h às 15h|Fechado
+Personal trainer|Saúde|#a3e635|Personal Fit|Atendimento em domicílio, São Paulo|Treino avulso:90,Pacote mensal:600,Avaliação física:80|6h às 20h|7h às 12h|Fechado
+Lava-rápido|Serviços|#38bdf8|Lava Rápido Brilho|Av. dos Carros, 500, São Paulo|Lavagem simples:40,Lavagem completa:80,Polimento:200|8h às 18h|8h às 16h|8h às 12h
+Assistência técnica de celular|Serviços|#fb923c|Cel Fix|Rua da Tecnologia, 25, São Paulo|Troca de tela:250,Troca de bateria:120,Orçamento:0|9h às 18h|9h às 14h|Fechado
+Lavanderia|Serviços|#93c5fd|Lavanderia Limpa|Rua Nova, 66, São Paulo|Camisa:15,Edredom:60,Terno:45|8h às 18h|8h às 13h|Fechado
+Floricultura|Comércio|#fda4af|Flor de Maria|Rua das Acácias, 10, São Paulo|Buquê:90,Arranjo:120,Orquídea:150|8h às 18h|8h às 14h|8h às 12h
+Papelaria|Comércio|#fcd34d|Papelaria Ponto|Rua do Estudante, 40, São Paulo|Caderno:22,Caneta:4,Cópia:0.5|9h às 18h|9h às 13h|Fechado
+Mercadinho|Comércio|#d9f99d|Mercadinho do Bairro|Rua Central, 5, São Paulo|Pão francês kg:18,Leite 1L:6,Café 500g:20|7h às 21h|7h às 21h|8h às 13h
+Escola de música|Educação|#fdba74|Música Viva|Rua dos Músicos, 9, São Paulo|Aula de violão:90,Aula de piano:110,Aula experimental:0|9h às 20h|9h às 14h|Fechado
+Reforço escolar|Educação|#67e8f9|Reforço Mais|Rua da Escola, 70, São Paulo|Aula avulsa:60,Pacote mensal:400,Redação:70|8h às 19h|8h às 12h|Fechado
+Autoescola|Educação|#fca5a5|Autoescola Direção|Av. do Trânsito, 150, São Paulo|Aula de direção:90,Pacote CNH:2200,Aula teórica:0|8h às 18h|8h às 12h|Fechado
+Hamburgueria|Alimentação|#ff9f40|Burger Nobre|Rua do Lanche, 12, São Paulo|Hambúrguer:32,Combo:45,Batata:18|18h às 23h|18h às 23h|18h às 23h
+Restaurante|Alimentação|#4ade80|Restaurante Sabor Caseiro|Av. Central, 45, São Paulo|Prato do dia:32,Marmita:24,Sobremesa:12|11h às 15h|11h às 16h|Fechado
+Outro negócio|Serviços|#c7c3e0|Meu Negócio|Rua Exemplo, 100, São Paulo|Serviço 1:50,Serviço 2:100|9h às 18h|9h às 13h|Fechado`.split("\n").map(l=>{const a=l.split("|");return{t:a[0],c:a[1],col:a[2],nome:a[3],end:a[4],svc:a[5].split(",").map(s=>{const i=s.lastIndexOf(":");return[s.slice(0,i),+s.slice(i+1)]}),h:[a[6],a[7],a[8]]}});
+const FAQ=[["Preciso agendar antes?","Recomendamos agendar, mas atendemos por ordem de chegada quando há vaga."],["Aceita cartão, Pix ou dinheiro?","Aceitamos Pix, cartão de crédito e débito e dinheiro."],["Tem estacionamento?","Temos estacionamento conveniado ao lado."]];
+const WO=[{k:"b",t:"Aplicativo WhatsApp Business",s:"Você já usa o aplicativo WhatsApp Business no celular.",tag:"Melhor caminho",d:"Você mantém o número e o histórico e continua respondendo pelo celular.",st:["Informe o número que você já usa no WhatsApp Business.","Faça login com o Facebook na janela da Meta.","Abra o aplicativo WhatsApp Business e confirme a conexão.","O Balcão liga o atendente com os seus serviços, preços e horários."],n:"Essa opção se chama coexistência. Alguns países ainda não têm suporte e os aparelhos vinculados ao celular são desconectados. Confirme se o Brasil está liberado e se o seu provedor oferece essa opção."},
+{k:"p",t:"WhatsApp pessoal (o comum)",s:"O WhatsApp comum, instalado no seu celular.",tag:"Exige migração",d:"O WhatsApp comum não pode ser ligado direto ao atendente.",st:["Instale o aplicativo WhatsApp Business no celular.","Migre sua conta comum para o WhatsApp Business.","Volte aqui e informe o número.","Faça login com o Facebook na janela da Meta e confirme."],n:"Sem migrar para o WhatsApp Business, a Meta não permite conectar o número."},
+{k:"n",t:"Número novo só para o atendente",s:"Um número que nunca teve WhatsApp.",tag:"Separado do celular",d:"O número fica só com o atendente, sem uso no celular.",st:["Tenha um chip ou número que nunca teve WhatsApp.","Informe o número aqui.","Faça login com o Facebook e valide o código recebido por SMS.","O Balcão liga o atendente com os seus serviços, preços e horários."],n:"O número novo é registrado na Cloud API da Meta e não funciona no aplicativo do celular."}];
+const KEY="balcao:v2",$=i=>document.getElementById(i);let S;
+try{S=JSON.parse(localStorage.getItem(KEY))}catch(e){}
+S=S||{t:"Pizzaria",d:null,st:[0,0,0],log:[],wa:"",wt:"b"};
+const sv=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+function toast(t){const e=$("toast");e.textContent=t;e.style.display="block";clearTimeout(e._t);e._t=setTimeout(()=>e.style.display="none",3200)}
+function load(t){const m=B.find(x=>x.t===t);S.t=t;S.d={nome:m.nome,end:m.end,svc:m.svc.map(x=>[...x]),faq:FAQ.map(x=>[...x]),h:[...m.h]};sv();render();hello();biz()}
+if(!S.d)load(S.t);
+let cat="Todos";
+function cats(){$("cats").innerHTML="";["Todos",...C].forEach(c=>{const b=document.createElement("button");b.className="cat"+(c===cat?" s":"");b.textContent=c;b.onclick=()=>{cat=c;cats();biz()};$("cats").append(b)})}
+function biz(){const q=$("sr").value.toLowerCase();$("biz").innerHTML="";B.filter(b=>(cat==="Todos"||b.c===cat)&&b.t.toLowerCase().includes(q)).forEach(b=>{const e=document.createElement("button");e.className="bz"+(b.t===S.t?" s":"");e.innerHTML='<b style="background:'+b.col+'"></b>'+b.t;e.onclick=()=>load(b.t);$("biz").append(e)})}
+$("sr").oninput=biz;
+function row(a,i,k){const r=document.createElement("div");r.className="r";const mk=(j,ph,cl)=>{const x=document.createElement("input");x.className="u "+cl;x.value=a[i][j];x.placeholder=ph;if(k==="s"&&j===1)x.inputMode="decimal";x.oninput=()=>{a[i][j]=k==="s"&&j===1?parseFloat(x.value.replace(",","."))||0:x.value;sv()};if(k==="f"&&j===0)x.style.fontWeight=800;return x};
+if(k==="s")r.append(mk(0,"Serviço",""),mk(1,"Preço","p"));else{const w=document.createElement("div");w.style.flex=1;w.append(mk(0,"Pergunta",""),mk(1,"Resposta",""));r.append(w)}
+const d=document.createElement("button");d.className="x";d.textContent="✕";d.onclick=()=>{a.splice(i,1);sv();render()};r.append(d);return r}
+function render(){const d=S.d;$("nome").value=d.nome;$("end").value=d.end;[0,1,2].forEach(i=>$("h"+i).value=d.h[i]);$("cn").textContent=d.nome;
+$("svc").innerHTML="";d.svc.forEach((_,i)=>$("svc").append(row(d.svc,i,"s")));$("faq").innerHTML="";d.faq.forEach((_,i)=>$("faq").append(row(d.faq,i,"f")));
+$("s1").textContent=S.st[0];$("s2").textContent=S.st[1];$("s3").textContent=S.st[2];$("wa").value=S.wa;wl();ring();
+const f=d.svc.find(s=>s[0]);$("qk").innerHTML="";["Vocês estão abertos agora?",f?"Qual é o preço de "+f[0].toLowerCase()+"?":"Quais os preços?","Posso fazer um pedido?","Onde fica?","Falar com uma pessoa"].forEach(t=>{const b=document.createElement("button");b.textContent=t;b.onclick=()=>{$("q").value=t;ask()};$("qk").append(b)})}
+$("nome").oninput=e=>{S.d.nome=e.target.value;$("cn").textContent=e.target.value;sv()};$("end").oninput=e=>{S.d.end=e.target.value;sv()};
+[0,1,2].forEach(i=>$("h"+i).oninput=e=>{S.d.h[i]=e.target.value;sv();ring()});
+$("aS").onclick=()=>{S.d.svc.push(["",0]);sv();render()};$("aF").onclick=()=>{S.d.faq.push(["",""]);sv();render()};
+$("bs").onclick=$("bs2").onclick=()=>{sv();toast("Negócio salvo neste navegador.")};
+$("bp").onclick=()=>{sv();toast("Atendente salvo e ativo aqui. O link público para clientes precisa do servidor do projeto.")};
+$("bv").onclick=()=>{$("lg").innerHTML=S.log.length?S.log.slice().reverse().map(l=>'<p><b style="color:var(--n)">'+esc(l[0])+'</b><br>'+esc(l[1])+'<br><span class="sm">'+l[2]+'</span></p>').join(""):"<p>Nenhum atendimento ainda. Converse com o atendente ao lado.</p>";$("dg").showModal()};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+function now(){const p=new Intl.DateTimeFormat("pt-BR",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());const g=t=>p.find(x=>x.type===t).value;const w=g("weekday").replace(".","").toLowerCase();const h=+g("hour")%24,m=+g("minute");return{dow:{dom:0,seg:1,ter:2,qua:3,qui:4,sex:5,"sáb":6,sab:6}[w],min:h*60+m,txt:String(h).padStart(2,"0")+"h"+g("minute")}}
+function span(t){const m=/(\d{1,2})(?::(\d{2}))?\s*h?\s*(?:–|-|às|a)\s*(\d{1,2})(?::(\d{2}))?/i.exec(t||"");return m?[+m[1]*60+(+m[2]||0),+m[3]*60+(+m[4]||0)]:null}
+const isOpen=()=>{const n=now(),s=span(S.d.h[n.dow===0?2:n.dow===6?1:0]);return !!s&&n.min>=s[0]&&n.min<s[1]};
+const P=(h,r)=>{const a=(h*15-90)*Math.PI/180;return[240+r*Math.cos(a),240+r*Math.sin(a)]};
+function ring(){const s=span(S.d.h[0]),n=now();let o=`<circle cx="240" cy="240" r="190" fill="none" stroke="#ff7a45" stroke-width="44"/>`,cl=24;
+if(s&&s[1]>s[0]){const a=s[0]/60,b=Math.min(24,s[1]/60);cl=Math.round(24-(b-a));const A=P(a,190),E=P(b,190);o+=b-a>=24?`<circle cx="240" cy="240" r="190" fill="none" stroke="#10133f" stroke-width="44"/>`:`<path d="M${A[0]} ${A[1]}A190 190 0 ${b-a>12?1:0} 1 ${E[0]} ${E[1]}" fill="none" stroke="#10133f" stroke-width="44"/>`}
+for(let h=0;h<24;h++){const a=P(h,218),b=P(h,h%3?228:238);o+=`<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="#525b8c" stroke-width="3" stroke-linecap="round"/>`}
+[0,6,12,18].forEach(h=>{const p=P(h,138);o+=`<text x="${p[0]}" y="${p[1]+7}" text-anchor="middle" font-family="Figtree,sans-serif" font-weight="800" font-size="21" fill="#525b8c">${h}h</text>`});
+const hp=P(n.min/60,190);o+=`<circle cx="${hp[0]}" cy="${hp[1]}" r="14" fill="#eceff9" stroke="#10133f" stroke-width="5"/>`;
+o+=`<text x="240" y="285" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="150" fill="#ff7a45">${cl}h</text><text x="240" y="322" text-anchor="middle" font-family="Figtree,sans-serif" font-size="18" fill="#525b8c">por dia o Balcão atende sozinho</text>`;
+$("ring").innerHTML=o;$("ptr").textContent="ponteiro: "+n.txt}
+setInterval(ring,30000);
+const brl=v=>v?"R$ "+v.toFixed(2).replace(".",","):"sem custo";
+const nm=s=>s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,""),wd=s=>nm(s).split(/[^a-z0-9]+/).filter(w=>w.length>3);
+function reply(q){const n=nm(q),d=S.d;
+if(/pessoa|humano|alguem|reclam/.test(n)){S.st[2]++;S.st[1]++;return"Certo, vou chamar alguém da equipe. Deixe seu nome e telefone que retornamos assim que possível."}
+for(const f of d.faq){const w=wd(f[0]);if(f[1]&&w.length&&w.filter(x=>n.includes(x)).length>=Math.min(2,w.length)){S.st[0]++;return f[1]}}
+if(/agendar|marcar|reserv|pedido|quero/.test(n)){S.st[1]++;return"Anotei seu pedido! Diga seu nome e o melhor dia e horário e a equipe confirma."}
+if(/sabado|domingo|hora|abre|aberto|fecha|funciona/.test(n)){S.st[0]++;return"Seg a sex: "+d.h[0]+"\nSábado: "+d.h[1]+"\nDomingo: "+d.h[2]+"\n"+(isOpen()?"Estamos abertos agora.":"Estamos fechados agora, mas posso ajudar por aqui.")}
+const hit=d.svc.filter(s=>s[0]&&wd(s[0]).some(w=>n.includes(w)));
+if(hit.length){S.st[0]++;return hit.map(s=>s[0]+": "+brl(s[1])).join("\n")}
+if(/preco|quanto|valor|custa|servico/.test(n)){S.st[0]++;return d.svc.filter(s=>s[0]).map(s=>s[0]+": "+brl(s[1])).join("\n")||"Ainda não cadastramos os serviços."}
+if(/onde|endereco|local|chegar/.test(n)){S.st[0]++;return"Ficamos em "+d.end+"."}
+S.st[2]++;return"Não tenho essa resposta, vou passar para a equipe. Pode deixar seu contato?"}
+function add(t,c){const m=document.createElement("div");m.className="m "+c;m.textContent=t;$("ms").append(m);$("ms").scrollTop=1e9}
+function hello(){$("ms").innerHTML="";add("Oi! Aqui é o atendente da "+S.d.nome+". Posso falar de preços, horários e atendimento. O que você precisa?","b")}
+function ask(){const q=$("q").value.trim();if(!q)return;$("q").value="";add(q,"u2");const r=reply(q);S.log.push([q,r,new Date().toLocaleString("pt-BR",{timeZone:"America/Sao_Paulo"})]);S.log=S.log.slice(-100);sv();setTimeout(()=>{add(r,"b");render()},300)}
+$("go").onclick=ask;$("q").onkeydown=e=>{if(e.key==="Enter")ask()};
+function opts(){$("opts").innerHTML="";WO.forEach(o=>{const b=document.createElement("button");b.className="opt"+(o.k===S.wt?" s":"");b.innerHTML='<span class="d">'+o.t+'</span>'+o.s;b.onclick=()=>{S.wt=o.k;sv();opts()};$("opts").append(b)});const o=WO.find(x=>x.k===S.wt);
+$("big").innerHTML='<span class="tag">'+o.tag+'</span><h3>'+o.t+'</h3><p style="margin-top:0">'+o.d+'</p>'+o.st.map((t,i)=>'<div class="st"><i>'+(i+1)+'</i><span>'+t+'</span></div>').join("")+'<div class="wn" style="font-weight:500;color:var(--m);margin-top:22px">'+o.n+'</div>'}
+function wl(){const n=(S.wa||"").replace(/\D/g,""),a=$("wl");if(n.length>=10){a.style.display="inline";a.href="https://wa.me/"+(n.length<=11?"55":"")+n}else a.style.display="none"}
+$("wc").onclick=()=>{S.wa=$("wa").value;sv();wl();$("wnn").textContent=S.wa.replace(/\D/g,"").length>=10?"Número salvo. A conexão ainda não foi ativada: é necessário configurar o aplicativo Meta e autorizar o WhatsApp Business. Nenhum número foi conectado.":"Digite o número com DDD."};
+cats();biz();opts();render();hello();
+</script></body></html>
